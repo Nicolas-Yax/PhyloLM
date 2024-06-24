@@ -15,12 +15,12 @@ This repository uses several libraries but some are optional depending on what y
 
 - Install the base of PhyloLM
 ```
-pip install -r requirements.txt --use-pep517
+pip install -r requirements.txt
 ```
 - The unrooted trees are no longer supported by the latest biopython version and require a previous version. This can be tricky to install depending on your OS. These a NOT necessary to run the code as you can plot rooted trees instead. Here are the lines to install them
 
 ```
-pip install biopython==1.69 numpy==1.23.0 matplotlib==1.5.3 networkx=1.7 pygraphviz
+pip install biopython==1.69 numpy==1.23.0 matplotlib==1.5.3 networkx=1.7 pygraphviz --use-pep517
 ```
 
 - Prepare the data
