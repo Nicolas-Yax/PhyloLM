@@ -1,5 +1,5 @@
-numpy==1.23.0 
-matplotlib==1.5.3 
+numpy
+matplotlib 
 requests 
 multiprocess 
 tqdm 
@@ -11,7 +11,7 @@ pandas
 fastparquet
 anthropic
 transformers
-networkx==1.7
+networkx
 vertexai
 google-cloud-aiplatform
 zstandard
