@@ -26,7 +26,7 @@ def load_batch(list):
 
 def load(path):
     """ Load a file from a path. The file can be a segment, a sequence or a batch. It may not work correctly if sequences in batches do not have the same length."""
-    data = np.load(path+'.npy',allow_pickle=True)
+    data = json.load(open(path+'.json','r'))
     if isinstance(data,dict):
         return load_segment(data)
     else:
@@ -40,15 +40,15 @@ def load(path):
 
 def save_segment(segment,path):
     d = segment.serialize()
-    np.save(path+'.npy',d)
+    json.dump(d,open(path+'.json','w'))
 
 def save_sequence(sequence,path):
     d = sequence.serialize()
-    np.save(path+'.npy',d)
+    json.dump(d,open(path+'.json','w'))
 
 def save_batch(batch,path):
     d = batch.serialize()
-    np.save(path+'.npy',d)
+    json.dump(d,open(path+'.json','w'))
 
 def save(data,path):
     #Create the directory if it does not exist

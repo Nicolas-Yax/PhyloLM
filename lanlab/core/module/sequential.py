@@ -20,7 +20,7 @@ class Sequential(Module):
 
     def run(self,struct,path=None):
         if path is not None:
-            if os.path.exists(path+'.npy'):
+            if os.path.exists(path+'.json'):
                 return load(path)
             else:
                 out = self._run(struct)
