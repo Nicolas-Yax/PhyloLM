@@ -1,12 +1,12 @@
 # PhyloLM
 
-PhyloLM is a cost-effective tool to maps model by similarity in a black box setting. Similarity matrices and genetic materials can then be used to plot dendrograms, MDS or to predict many things about LLMs like benchmark scores for example. 🧬🤖
+🧬🤖 PhyloLM is a cost-effective tool to maps model by similarity in a black box setting. Similarity matrices and genetic materials can then be used to plot dendrograms, MDS or to predict many things about LLMs like benchmark scores for example. 
 
-paper : https://arxiv.org/abs/2404.04671
+📚 paper : https://arxiv.org/abs/2404.04671
 
-This repository contains the code for replicating figures in the paper and is given for transparency and replication purposes and may not be fit for production environments in terms of optimization requirements.
+🔬 This repository contains the code for replicating figures in the paper and is given for transparency and replication purposes and may not be fit for production environments in terms of optimization requirements.
 
-We encourage people that are interested in PhyloLM to use the colab demo that implements the algorithm in a simple and versatile manner :
+🌐 We encourage people that are interested in PhyloLM to use the colab demo that implements the algorithm in a simple and versatile manner :
 colab demo : https://colab.research.google.com/drive/1agNE52eUevgdJ3KL3ytv5Y9JBbfJRYqd?usp=copy
 
 
@@ -25,7 +25,12 @@ pip install biopython==1.69 numpy==1.23.0 matplotlib==1.5.3 networkx=1.7 pygraph
 
 - Prepare the data
 ```
-unzip data.zip
+unzip data/kl_pop/codef.zip
+unzip data/kl_pop/codef_nostop.zip
+unzip data/kl_pop/llemaf_nostop.zip
+unzip data/kl_pop/llemaf/genes.zip
+unzip data/kl_pop/llemaf/probes_batch/probes_batch1.zip
+unzip data/kl_pop/llemaf/probes_batch/probes_batch2.zip
 bash download_data.sh
 git clone https://huggingface.co/datasets/open-llm-leaderboard/results
 ```
