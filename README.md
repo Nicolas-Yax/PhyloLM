@@ -6,7 +6,7 @@
 
 🔬 This repository contains the code for replicating figures in the paper and is given for transparency and replication purposes and may not be fit for production environments in terms of optimization requirements.
 
-🌐 We encourage people that are interested in PhyloLM to use the colab demo that implements the algorithm in a simple and versatile manner :
+🌐 We encourage people that are interested in PhyloLM to use the colab demo that implements the algorithm in a simple and versatile manner.
 colab demo : https://colab.research.google.com/drive/1agNE52eUevgdJ3KL3ytv5Y9JBbfJRYqd?usp=copy
 
 ## Step by step installation instructions
@@ -42,6 +42,6 @@ This project is built on top of lanlab, a simple library to automate queries to 
 Here are the 5 notebooks :
 - phylolm\_figures\_dendrograms.ipynb that is a notebook used to make all the figures related to dendrograms and similarity matrices
 - phylolm\_figures\_benchmarks.ipynb that contains the code to make benchmark prediction
-- phylolm\_figures\_hyperparameters.ipynb contains the code for the hyperparameter estimate. The data for this code are not provided here.
+- phylolm\_figures\_hyperparameters.ipynb contains the code for the hyperparameter estimate.
 - gene_maker.ipynb that contains the code for making genes out of benchmarks
 - colab_notebook.ipynb that is a simple notebook to upload on colab and provides a very simple interface with PhyloLM to run on the LLMs you want without needing much compute yourself. Free GPU is enough to run it quite fast.
