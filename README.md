@@ -16,7 +16,7 @@ This repository uses several libraries but some are optional depending on what y
 ```
 pip install -r requirements.txt
 ```
-- The unrooted trees are no longer supported by the latest biopython version and require a previous version. This can be tricky to install depending on your OS and your python version (ours worked with python 3.8). These a NOT necessary to run the code as you can still plot rooted trees instead. Here are the lines to install them
+- The unrooted trees are no longer supported by the latest biopython version and require a previous version. This can be tricky to install as it requires old library verions and depending on your OS and your python version this may not work correctly (ours worked with python 3.8). These are NOT necessary to run the code as you can still plot rooted trees instead. Here are the lines to install the libraries to plot unrooted trees :
 
 ```
 pip install biopython==1.69 numpy==1.23.0 matplotlib==1.5.3 networkx==1.7 pygraphviz --use-pep517
