@@ -24,7 +24,7 @@ pip install biopython==1.69 numpy==1.23.0 matplotlib==1.5.3 networkx=1.7 pygraph
 
 - Prepare the data
 ```
-unzip data/kl_pop/codef.zip -d data/kl_pop
+unzip -q data/kl_pop/codef.zip -d data/kl_pop
 unzip -q data/kl_pop/codef_nostop.zip -d data/kl_pop
 unzip -q data/kl_pop/llemaf_nostop.zip -d data/kl_pop
 unzip -q data/kl_pop/llemaf/genes.zip -d data/kl_pop/llemaf
