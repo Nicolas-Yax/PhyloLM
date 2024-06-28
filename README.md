@@ -25,11 +25,11 @@ pip install biopython==1.69 numpy==1.23.0 matplotlib==1.5.3 networkx=1.7 pygraph
 - Prepare the data
 ```
 unzip data/kl_pop/codef.zip -d data/kl_pop
-unzip data/kl_pop/codef_nostop.zip -d data/kl_pop -q
-unzip data/kl_pop/llemaf_nostop.zip -d data/kl_pop -q
-unzip data/kl_pop/llemaf/genes.zip -d data/kl_pop/llemaf -q
-unzip data/kl_pop/llemaf/probes_batch/probes_batch1.zip -d data/kl_pop/llemaf/probes_batch -q
-unzip data/kl_pop/llemaf/probes_batch/probes_batch2.zip -d data/kl_pop/llemaf/probes_batch -q
+unzip -q data/kl_pop/codef_nostop.zip -d data/kl_pop
+unzip -q data/kl_pop/llemaf_nostop.zip -d data/kl_pop
+unzip -q data/kl_pop/llemaf/genes.zip -d data/kl_pop/llemaf
+unzip -q data/kl_pop/llemaf/probes_batch/probes_batch1.zip -d data/kl_pop/llemaf/probes_batch
+unzip -q data/kl_pop/llemaf/probes_batch/probes_batch2.zip -d data/kl_pop/llemaf/probes_batch
 bash download_data.sh
 git clone https://huggingface.co/datasets/open-llm-leaderboard-old/results
 ```
