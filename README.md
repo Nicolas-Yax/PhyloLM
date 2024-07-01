@@ -22,16 +22,9 @@ pip install -r requirements.txt
 pip install biopython==1.69 numpy==1.23.0 matplotlib==1.5.3 networkx==1.7 pygraphviz --use-pep517
 ```
 
-- Prepare the data
+- Prepare the respository (unzip data files + download open-web-math/mbxp + HuggingFace leaderboard results)
 ```
-unzip -q data/kl_pop/code_params.zip -d data/kl_pop
-unzip -q data/kl_pop/code.zip -d data/kl_pop
-unzip -q data/kl_pop/math.zip -d data/kl_pop
-unzip -q data/kl_pop/math_params/genes.zip -d data/kl_pop/math_params
-unzip -q data/kl_pop/math_params/probes_batch/probes_batch1.zip -d data/kl_pop/math_params/probes_batch
-unzip -q data/kl_pop/math_params/probes_batch/probes_batch2.zip -d data/kl_pop/math_params/probes_batch
-bash download_data.sh
-git clone https://huggingface.co/datasets/open-llm-leaderboard-old/results
+bash setup.sh
 ```
 
 - If you want to use Mistral, OPENAI or Claude API you can fill the .api_[NAME] with the API tokens. To access VertexAI you'll need to follow instructions on how to setup vertexAI authentification and you should update the .api_vertexai with the project name.
