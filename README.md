@@ -16,11 +16,6 @@ This repository uses several libraries but some are optional depending on what y
 ```
 pip install -r requirements.txt
 ```
-- The unrooted trees are no longer supported by the latest biopython version and require a previous version. This can be tricky to install as it requires old library verions and depending on your OS and your python version this may not work correctly (ours worked with python 3.8). These are NOT necessary to run the code as you can still plot rooted trees instead. Here are the lines to install the libraries to plot unrooted trees :
-
-```
-pip install biopython==1.69 numpy==1.23.0 matplotlib==1.5.3 networkx==1.7 pygraphviz --use-pep517
-```
 
 - Prepare the respository (unzip data files + download open-web-math/mbxp + HuggingFace leaderboard results)
 ```
@@ -28,6 +23,11 @@ bash setup.sh
 ```
 
 - If you want to use Mistral, OPENAI or Claude API you can fill the .api_[NAME] with the API tokens. To access VertexAI you'll need to follow instructions on how to setup vertexAI authentification and you should update the .api_vertexai with the project name.
+---
+- The unrooted trees are no longer supported by the latest biopython version and require a previous version. This can be tricky to install as it requires old library verions and depending on your OS and your python version this may not work correctly (requires python 3.8). These are NOT necessary to run the code as you can still plot rooted trees instead. Here are the lines to install the libraries to plot unrooted trees :
+```
+pip install biopython==1.69 numpy==1.23.0 matplotlib==1.5.3 networkx==1.7 pygraphviz --use-pep517
+```
 
 ## Documentation
 This project is built on top of lanlab, a simple library to automate queries to LLMs. The lanlab folder contains the basic materials to make the framework run. Using this framework only 5 notebooks are used to generate all the figures in the study. These files reuse the dataset acquired through the study. You can delete the data folder to recompute everything from scratch but it will require very expensive hardware and this version of the code isn't optimized for this. We didn't include the efficient LLM loading scripts as they may depend on the hardware users are using.
