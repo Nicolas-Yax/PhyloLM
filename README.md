@@ -2,7 +2,7 @@
 
 🧬🤖 PhyloLM is a cost-effective tool to maps model by similarity in a black box setting. Similarity matrices and genetic materials can then be used to plot dendrograms, MDS or to predict many things about LLMs like benchmark scores for example. 
 
-📚 paper : https://arxiv.org/abs/2404.04671
+📖 paper : https://arxiv.org/abs/2404.04671
 
 🔬 This repository contains the code for replicating figures in the paper and is given for transparency and replication purposes and may not be fit for production environments in terms of optimization requirements.
 
@@ -24,12 +24,12 @@ pip install biopython==1.69 numpy==1.23.0 matplotlib==1.5.3 networkx==1.7 pygrap
 
 - Prepare the data
 ```
-unzip -q data/kl_pop/codef.zip -d data/kl_pop
-unzip -q data/kl_pop/codef_nostop.zip -d data/kl_pop
-unzip -q data/kl_pop/llemaf_nostop.zip -d data/kl_pop
-unzip -q data/kl_pop/llemaf/genes.zip -d data/kl_pop/llemaf
-unzip -q data/kl_pop/llemaf/probes_batch/probes_batch1.zip -d data/kl_pop/llemaf/probes_batch
-unzip -q data/kl_pop/llemaf/probes_batch/probes_batch2.zip -d data/kl_pop/llemaf/probes_batch
+unzip -q data/kl_pop/code_params.zip -d data/kl_pop
+unzip -q data/kl_pop/code.zip -d data/kl_pop
+unzip -q data/kl_pop/math.zip -d data/kl_pop
+unzip -q data/kl_pop/math_params/genes.zip -d data/kl_pop/math_params
+unzip -q data/kl_pop/math_params/probes_batch/probes_batch1.zip -d data/kl_pop/math_params/probes_batch
+unzip -q data/kl_pop/math_params/probes_batch/probes_batch2.zip -d data/kl_pop/math_params/probes_batch
 bash download_data.sh
 git clone https://huggingface.co/datasets/open-llm-leaderboard-old/results
 ```
@@ -39,9 +39,15 @@ git clone https://huggingface.co/datasets/open-llm-leaderboard-old/results
 ## Documentation
 This project is built on top of lanlab, a simple library to automate queries to LLMs. The lanlab folder contains the basic materials to make the framework run. Using this framework only 5 notebooks are used to generate all the figures in the study. These files reuse the dataset acquired through the study. You can delete the data folder to recompute everything from scratch but it will require very expensive hardware and this version of the code isn't optimized for this. We didn't include the efficient LLM loading scripts as they may depend on the hardware users are using.
 
-Here are the 5 notebooks :
-- phylolm\_figures\_dendrograms.ipynb that is a notebook used to make all the figures related to dendrograms and similarity matrices
-- phylolm\_figures\_benchmarks.ipynb that contains the code to make benchmark prediction
-- phylolm\_figures\_hyperparameters.ipynb contains the code for the hyperparameter estimate.
+📓 Here are the 5 notebooks :
+- phylolm\_figures\_dendrograms.ipynb that is a notebook used to make all the figures related to dendrograms and similarity matrices (see Figures 3 and 4 in the paper)
+- phylolm\_figures\_benchmarks.ipynb that contains the code to make benchmark prediction (see Figure 5 in the paper)
+- phylolm\_figures\_hyperparameters.ipynb contains the code for the hyperparameter estimate. (see Figure 2 in the paper)
 - gene_maker.ipynb that contains the code for making genes out of benchmarks
-- colab_notebook.ipynb that is a simple notebook to upload on colab and provides a very simple interface with PhyloLM to run on the LLMs you want without needing much compute yourself. Free GPU is enough to run it quite fast.
+- colab_notebook.ipynb that is a simple notebook to upload on colab and provides a very simple interface with PhyloLM to run on the LLMs you want without needing much compute yourself. Free GPU is enough to run it quite fast. It can also be accessed using this link : https://colab.research.google.com/drive/1agNE52eUevgdJ3KL3ytv5Y9JBbfJRYqd?usp=copy
+
+🗃️ The data folder contains 4 sets of genes :
+- 'math_params' is a large set of genes extracted from open-web-math used to run the hyperparameter estimation (see phylolm\_figures\_hyperparameters.ipynb and Figure 2 in the paper).
+- 'math' is extracted from open-web-math and is used to plot the dendrograms on the math genome (see phylolm\_figures\_dendrograms.ipynb and Figures 3 and 4 in the paper)
+- 'code_params' is a large set of genes extracted from mbxp used to run the hyperparameter estimation (see phylolm\_figures\_hyperparameters.ipynb and Figure 2 in the paper).
+- 'code' is extracted from mbxp and is used to plot the dendrograms on the code genome (see phylolm\_figures\_dendrograms.ipynb and Figures 3 and 4 in the paper)
